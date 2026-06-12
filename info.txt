@@ -1,0 +1,178 @@
+1. Admin Panel – Tasks
+
+Dashboard (Total quizzes, users, attempts, revenue etc.)
+Admin Login / Logout
+Roles & Permissions manage
+Teacher / Student manage
+Category / Subject manage
+Difficulty Level manage (Easy / Medium / Hard)
+Quiz approval (Teacher ne banaya quiz approve/reject)
+Question bank manage
+Reports & Analytics
+Quiz attempts monitoring
+User activity logs
+Settings (Time limit, pass marks, negative marking)
+Backup & Restore
+CMS Pages (About, Terms, Privacy Policy)
+===============================================================
+2. User Management
+
+Student management
+Instructor / Teacher management
+Block / unblock users
+Manual subscription assign
+Login activity & audit logs
+===============================================================
+3. Category & Master Data
+
+Category / Sub-category
+Difficulty levels
+Languages
+Tags
+Pricing slabs
+===============================================================
+4. Quiz Moderation
+
+Quiz approval / rejection
+Question quality review
+Schedule override
+Enable / disable quiz
+===============================================================
+5. Teacher / Quiz Creator – Tasks
+
+Teacher Registration / Login
+Profile management
+Create Quiz
+Set Quiz rules
+	Time limit
+	Total marks
+	Passing marks
+	Negative marking
+Add Questions
+	MCQ
+	True / False
+	Fill in the blanks
+	Image based questions
+Import questions (Excel / CSV)
+Question randomization
+Publish / Unpublish quiz
+Schedule quiz (Start & End date/time)
+View student attempts
+Analyze results
+Download reports (PDF / Excel)
+
+Question Management
+	MCQ / True-False / Descriptive
+	Image & audio questions
+	Bulk upload (Excel / CSV)
+	Question bank reuse
+	Difficulty tagging
+===============================================================
+6. Student / User – Tasks
+
+Registration / Login
+Profile management
+View available quizzes
+Filter quiz (Category, Level)
+Start quiz
+Timer based quiz
+Auto save answers
+Submit quiz
+View result (Score, Correct/Wrong)
+Answer review
+Download certificate (optional)
+Re-attempt quiz (if allowed)
+Leaderboard view
+History of attempted quizzes
+===============================================================
+7. Quiz & Question Management – Tasks
+
+Create / Edit / Delete Quiz
+Create / Edit / Delete Questions
+Question Bank
+Shuffle questions & options
+Negative marking support
+Marks per question
+Section-wise quiz
+Multi-language support
+===============================================================
+8. Result & Evaluation – Tasks
+
+Auto evaluation
+Manual evaluation (Descriptive questions)
+Score calculation
+Rank calculation
+Percentage & Grade
+Result publish/unpublish
+Export results (PDF/Excel)
+===============================================================
+9. Security & System – Tasks
+
+Authentication & Authorization
+Password encryption
+Session management
+Prevent multiple logins
+Tab switch detection
+Copy/Paste disable (optional)
+IP based restrictions
+Device restriction
+===============================================================
+10. Notification & Communication – Tasks
+
+Email notifications
+SMS notifications
+Quiz start reminder
+Result announcement
+Password reset
+Admin announcements
+===============================================================
+11. Advanced / Optional Features
+
+Paid quizzes (Payment Gateway)
+Coupon & discount system
+Subscription plans
+Live quiz
+Real-time leaderboard
+AI-based question suggestion
+
+
+==============================================================================================================================
+Create Quiz (Quiz Basic Details)
+
+Field Name	Type	Description
+quiz_title	Text	Quiz ka naam
+quiz_description	Textarea	Short description
+category_id	Select	Quiz category
+difficulty	Select	Easy / Medium / Hard
+total_questions	Number	Total questions
+status	Select	Draft / Active / Inactive
+start_date	Datetime	Quiz start time
+end_date	Datetime	Quiz end time
+created_by	Hidden	Admin/User ID
+=============================================
+
+Set Quiz Rules
+
+Field	Type	Description
+time_limit	Number (minutes)	Quiz duration
+total_marks	Number	Total marks
+passing_marks	Number	Pass hone ke marks
+negative_marking	Select	Yes / No
+negative_marks	Number	Per wrong answer
+allow_skip	Select	Yes / No
+show_result	Select	Instant / After submission
+attempts_allowed	Number	Max attempts
+shuffle_questions	Checkbox	Random questions
+shuffle_options	Checkbox	Random options
+
+=============================================
+Add Questions (Common Fields – All Types)
+
+Field	Type
+quiz_id	FK
+question_text	Textarea
+question_type	Enum (mcq / tf / fill / image)
+marks	Number
+explanation	Textarea
+is_required	Boolean
+status	Active/Inactive
