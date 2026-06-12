@@ -283,7 +283,7 @@
 
 <section class="regions" id="quiz">
 	<div class="d-flex justify-content-center align-items-center">
-		<h2 class="section-title">All Quizzes, All Effort – Let Your Knowledge Shine! </h2>
+		<h2 class="section-title">All Quizzes, All Effort – Let Your Knowledge Shine! hello</h2>
 	</div>
 </section>
 
